@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Malyiy/SIMULACROOM/issues"
   },
-  "homepage": "https://github.com/Malyiy/SIMULACROOM#readme"
+  "homepage": "https://github.com/Malyiy/SIMULACROOM#readme",
+  "dependencies": {
+    "firebase": "^7.8.0"
+  }
 }
