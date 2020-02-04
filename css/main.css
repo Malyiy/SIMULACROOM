@@ -1,0 +1,31 @@
+body {
+	margin:0;
+	padding: 0;
+}
+
+nav a {
+	text-decoration: none;
+	margin-left: 20px;
+	color: #000;
+	
+}
+
+nav {
+	background-color: #505050;
+	width: 100%;
+	display: flex;
+}
+
+.body {
+	display: grid;
+	grid-template-columns: 20% 60% 20%;
+	background: 
+}
+
+.body div{
+	margin: 1px;
+	padding: 5px;
+	/*border: solid;*/
+	height: 100%;
+
+}
