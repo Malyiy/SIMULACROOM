@@ -1,0 +1,19 @@
+{
+  "name": "simulacroom",
+  "version": "1.0.0",
+  "description": "Best site for you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malyiy/SIMULACROOM.git"
+  },
+  "author": "Kirill, Iliya, Valeriy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malyiy/SIMULACROOM/issues"
+  },
+  "homepage": "https://github.com/Malyiy/SIMULACROOM#readme"
+}
