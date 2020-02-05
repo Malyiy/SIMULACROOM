@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SIMULACROOM - your chanse to waste your time!</title>
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css"> 
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+
 </head>
 <body>
 	<nav class="nav">
@@ -12,7 +14,30 @@
 		<a href="#">PERSONAL CABINET</a>
 	</nav>
 	<div class="body">
-		<div class="reg">
+		<div id="modal-signup" class="modal">
+		    <div class="modal-content">
+		      <form id="signup-form">
+		      	<div class="input-field">
+		         <input type="user" id="signup-nick" required />
+		          <span class="bar"></span>
+		          <label for="signup-nick">Nickname</label>
+		        </div>
+		        <div class="input-field">
+		          <input type="email" id="signup-email" required />
+		          <span class="bar"></span>
+		          <label for="signup-email">Email address</label>
+		        </div>
+		        <div class="input-field">
+		          <input type="password" id="signup-password" required />
+		          <span class="bar"></span>
+		          <label for="signup-password">Choose password</label>
+		        </div>
+<!-- 		        <button class="button">Sign up</button>
+ -->		        <a class="kostyl"><input class="button" type="submit" value="Sign Up"/></a>
+		      </form>
+		    </div>
+		  </div>
+		<!--<div class="reg">
 						
 			<form>
 			   <div class="group">      
@@ -32,25 +57,26 @@
 			   </div>
 			</form>
 			<a href="ready.html" class="button">REGISTRATION</a>
-		</div>
+		</div>-->
 		<div class="logo">
 			<img src="css/img/logo_r.png" alt="" class="logo_img">
 		</div>
-		<div class="sin">
-			<form>
-			   <div class="group">      
-			      <input type="text" required>
-			      <span class="bar"></span>
-			      <label>Email or nickname:</label>
-			   </div>
-			   <div class="group">      
-			      <input type="text" required>
-			      <span class="bar"></span>
-			      <label>Password:</label>
-			   </div>
-			</form>
-			<a href="#" class="button">SING IN</a>
-		</div>
+			<div id="modal-login" class="modal">
+		    <div class="modal-content">
+		      <form id="login-form">
+		        <div class="input-field">
+		          <input type="email" id="login-email" required />
+		          <label for="login-email">Email address</label>
+		        </div>
+		        <div class="input-field">
+		          <input type="password" id="login-password" required />
+		          <label for="login-password">Your password</label>
+		        </div>
+		        <a class="kostyl"><input class="button" type="submit" value="Log In"/></a>
+		      </form>
+		    </div>
+		  </div>
+
 	</div>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
