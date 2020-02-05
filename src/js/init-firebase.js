@@ -11,4 +11,20 @@ var firebaseConfig = {
 };
 
 // Initialize Firebase
+
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/firestore");
+var firebaseui = require('firebaseui');
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+ui.start('#firebaseui-auth-container', {
+    signInOptions: [
+        {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            requireDisplayName: false
+        }
+    ]
+});
+
 firebase.initializeApp(firebaseConfig);
