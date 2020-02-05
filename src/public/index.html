@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SIMULACROOM - your chanse to waste your time!</title>
-	<link rel="stylesheet" href="css/main.css"> 
-	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+<!--	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+	<link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
@@ -17,11 +17,11 @@
 		<div id="modal-signup" class="modal">
 		    <div class="modal-content">
 		      <form id="signup-form">
-		      	<div class="input-field">
-		         <input type="user" id="signup-nick" required />
-		          <span class="bar"></span>
-		          <label for="signup-nick">Nickname</label>
-		        </div>
+<!--		      	<div class="input-field">-->
+<!--		         <input type="user" id="signup-nick" required />-->
+<!--		          <span class="bar"></span>-->
+<!--		          <label for="signup-nick">Nickname</label>-->
+<!--		        </div>-->
 		        <div class="input-field">
 		          <input type="email" id="signup-email" required />
 		          <span class="bar"></span>
@@ -97,7 +97,7 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 		const auth = firebase.auth();
-		const db = firebase.firestore();
+		const db = firebase.firestore(); 
 	</script>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -109,6 +109,7 @@
 	<script src="bower_components/firebaseui/dist/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/register.js"></script>
 

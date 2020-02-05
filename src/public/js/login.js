@@ -1,4 +1,17 @@
+const authForm = document.querySelector('#signup-form');
+authForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
+    const email = authForm['signup-email'].value;
+    const password = authForm['signup-password'].value;
+
+    auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        const modal = document.querySelector('#modal-signup');
+        M.Modal.getInstance(modal).close();
+        authForm.reset();
+    })
+
+} );
 
 
 
