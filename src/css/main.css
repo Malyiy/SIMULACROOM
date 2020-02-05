@@ -1,3 +1,4 @@
+<<<<<<< HEAD:public/css/main.css
 body {
 	margin:0;
 	padding: 0;
@@ -108,3 +109,45 @@ input:focus ~ .bar:before,
 input:focus ~ .bar:after {
   width: 50%;
 }
+=======
+body {
+	margin:0;
+	padding: 0;
+	height: 100%;
+}
+
+nav a {
+	text-decoration: none;
+	margin: 20px;
+	color: #000;
+	
+}
+
+nav {
+	background-color: #505050;
+	width: 100%;
+	display: flex;
+}
+
+.body {
+	display: grid;
+	grid-template-columns: 20% 60% 20%;
+	background: url(img/background.jpg) 100% no-repeat;
+	background-size: cover;
+	height: 95vh;
+}
+
+.body div{
+	margin: 1px;
+	padding: 5px;
+	/*border: solid;*/
+	
+	overflow: hidden;
+
+}
+
+.logo_img {
+	width: 100%;
+
+}
+>>>>>>> simulacroom:src/css/main.css
