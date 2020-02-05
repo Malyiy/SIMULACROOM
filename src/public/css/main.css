@@ -59,11 +59,11 @@ input:focus {
   outline: none;
 }
 
-/* LABEL ======================================= */
+/*Текстовые поля (формы) */
 label {
   color: #999;
   font-size: 18px;
-  position: absolute;
+  /*position: absolute;*/
   pointer-events: none;
   left: 10px;
   top: 15px;
@@ -109,14 +109,14 @@ input:focus ~ .bar:before,
 input:focus ~ .bar:after {
   width: 50%;
 }
-a {
+a, .button {
   text-decoration: none;
   outline: none;
   display: inline-block;
   padding: 5px 20px;
   margin: 10px 20px;
   position: relative;
-  color: white;
+  color: black;
  /* border: 1px solid rgba(255,255,255,.4);*/
   background: none;
   font-weight: 300;
@@ -125,12 +125,12 @@ a {
   letter-spacing: 2px;
 }
 .button {
-  background: black;
-  opacity: 0.7;
+/*  background: black;
+*/  opacity: 0.7;
   padding:5px 15px;
 }
 a:before,
-a:after {
+a:after, .button:before, .button:after {
   content: "";
   position: absolute;
   width: 0;
@@ -138,14 +138,14 @@ a:after {
   opacity: 0;
   box-sizing: border-box;
 }
-a:before {
+a:before, .button:before {
   bottom: 0;
   left: 0;
   border-left: 1.5px solid red;
   border-top: 1.5px solid red;
   transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
 }
-a:after {
+a:after, .button:after{
   top: 0;
   right: 0;
   border-right: 1.5px solid red;
@@ -153,12 +153,17 @@ a:after {
   transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s;
 }
 a:hover:before,
-a:hover:after{
+a:hover:after, .button:hover:before, .button:hover:after{
   height: 100%;
   width: 100%;
   opacity: 1;
 }
-a:hover:before {transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;}
-a:hover:after {transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;}
-a:hover {background: none;}
-.button:hover{background: black;}
+a:hover:before, .button:hover:before {transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;}
+a:hover:after, .button:hover:after {transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s;}
+a:hover, .button:hover {background: none;}
+/*.button:hover{background: black;}*/
+.kostyl{
+  margin:0;
+  padding: 0;
+  border-bottom: none;
+}
