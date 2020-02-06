@@ -1,5 +1,9 @@
 
 
+auth.onAuthStateChanged(user => {
+if (user) window.location = 'ready.html';
+});
+
 const authForm = document.querySelector('#signup-form');
 authForm.addEventListener('submit', (e) => {
     e.preventDefault();

@@ -1,12 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Rady</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Private state</title>
 </head>
 <body>
-	<div>
-		<h1>READY</h1>
-	</div>
+<p aria-valuetext="Hello">Hello a</p>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyD59NnsR_vKkM-_Dc7wa_3hpQWpCuI1fWw",
+        authDomain: "simu1acroom.firebaseapp.com",
+        databaseURL: "https://simu1acroom.firebaseio.com",
+        projectId: "simu1acroom",
+        storageBucket: "simu1acroom.appspot.com",
+        appId: "1:50125508646:web:c0da23830e8d6fc71556e7",
+        measurementId: "G-1BE43LETNS"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+</script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.8.0/firebase-app.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script src="js/checkAuth.js"></script>
 </body>
 </html>
