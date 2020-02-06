@@ -1,3 +1,5 @@
+
+
 const authForm = document.querySelector('#signup-form');
 authForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -5,11 +7,52 @@ authForm.addEventListener('submit', (e) => {
     const email = authForm['signup-email'].value;
     const password = authForm['signup-password'].value;
 
+
+
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         const modal = document.querySelector('#modal-signup');
+
         M.Modal.getInstance(modal).close();
         authForm.reset();
     })
+        .catch(error => {
+            if (error.code === 'auth/email-already-in-use') {
+                try {
+                    auth.signInWithEmailAndPassword(email, password).then((cred) => {
+                        console.log(cred.user);
+                        const modal = document.querySelector('#modal-signup');
+                        M.Modal.getInstance(modal).close();
+                    })
+                } catch (err) {
+                    console.log(`Email address ${this.state.email} already in use.`);
+                }
+            } else {
+                console.log(error)
+            }
+        });
+
+    //     .catch(error => {
+    //         switch (error.code) {
+    //             case 'auth/email-already-in-use':
+    //                 try {auth.signInWithEmailAndPassword(email, password).then((cred) => {
+    //                     console.log(cred.user);
+    //                     // close the signup modal & reset form
+    //                     const modal = document.querySelector('#modal-signup');
+    //                     M.Modal.getInstance(modal).close();
+    //                 }
+    //                 catch (err)
+    //                     {
+    //                         console.log(`Email address ${this.state.email} already in use.`);
+    //                     }
+    //             case 'auth/invalid-email':
+    //                 console.log(`Email address ${this.state.email} is invalid.`);
+    //             case 'auth/operation-not-allowed':
+    //                 console.log(`Error during sign up.`);
+    //             case 'auth/weak-password':
+    //                 console.log('Password is not strong enough. Add additional characters including special characters and numbers.');
+    //             default:
+    //                 console.log(error.message);
+    //         }
 
 } );
 
