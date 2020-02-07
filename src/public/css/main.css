@@ -16,6 +16,7 @@ nav {
 	width: 100%;
 	display: flex;
   opacity: 0.8;
+  position: fixed;
 }
 
 .body {
@@ -23,13 +24,13 @@ nav {
 	grid-template-columns: 20% 60% 20%;
 	background: url(img/background.jpg) 100% no-repeat;
 	background-size: cover;
-	height: 95vh;
+	height: 100vh;
 }
 
 .body div{
 	margin: 1px;
 	padding: 5px;
-	/*border: solid;*/
+	border: solid;
 	
 	overflow: hidden;
 
