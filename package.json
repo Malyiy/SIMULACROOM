@@ -10,14 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/Malyiy/SIMULACROOM.git"
   },
-  "author": "Kirill, Iliya, Valeriy",
+  "author": "Kirill, Iliya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Malyiy/SIMULACROOM/issues"
   },
   "homepage": "https://github.com/Malyiy/SIMULACROOM#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "firebase": "^7.8.0",
-    "firebaseui": "^4.4.0"
-  }
+    "firebase-admin": "^8.9.2",
+    "firebase-functions": "^3.3.0",
+    "firebaseui": "^4.4.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {}
 }

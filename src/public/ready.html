@@ -19,10 +19,53 @@
 				<p>SimulacRoom is your perfect chanse to vaste your time with some usefull and absolutly not things! Here you can play games, listen to music, bite some snakes or argue with antic phylosophysts. But now here is some fresh news in our town.</p>
 			</div>
 			<div class="parser">
-				
+				<script>
+					var request = require('request');
+
+					var URL = 'https://www.plovdiv24.bg/novini';
+
+					request(URL, function (err, res, body) {
+						if (err) throw err;
+						console.log(body);
+						console.log(res.statusCode);
+					});
+
+
+				</script>
 			</div>
 		</div>
 		
 	</div>
+<p aria-valuetext="Hello">Hello a</p>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyD59NnsR_vKkM-_Dc7wa_3hpQWpCuI1fWw",
+        authDomain: "simu1acroom.firebaseapp.com",
+        databaseURL: "https://simu1acroom.firebaseio.com",
+        projectId: "simu1acroom",
+        storageBucket: "simu1acroom.appspot.com",
+        appId: "1:50125508646:web:c0da23830e8d6fc71556e7",
+        measurementId: "G-1BE43LETNS"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+</script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.8.0/firebase-app.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+<script src="js/checkAuth.js"></script>
 </body>
 </html>
