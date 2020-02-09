@@ -14,19 +14,28 @@ pipeUp.src = "game/textures/flappy_bird_pipeUp.png";
 pipeBottom.src = "game/textures/flappy_bird_pipeBottom.png";
 
 // Звуковые файлы
-var fly = new Audio();
+var main_audio = new Audio();
 var score_audio = new Audio();
+var fail_audio = new Audio();
 
 score_audio.src = "game/sounds/score.mp3";
+main_audio.src = "game/sounds/main.mp3";
+fail_audio.src = "game/sounds/fail.mp3"
+
+function play_main () {
+    main_audio.play();
+}
 
 var gap = 90;
 
 // При нажатии на какую-либо кнопку
 document.addEventListener("keydown", moveUp);
+document.addEventListener('click',moveUp);
+
 
 function moveUp() {
     yPos -= 25;
-    fly.play();
+    play_main();
 }
 
 // Создание блоков
@@ -63,8 +72,15 @@ function draw() {
         if(xPos + bird.width >= pipe[i].x
             && xPos <= pipe[i].x + pipeUp.width
             && (yPos <= pipe[i].y + pipeUp.height
-                || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos + bird.height >= cvs.height - fg.height) {
-            location.reload(); // Перезагрузка страницы
+                || yPos + bird.height >= pipe[i].y + pipeUp.height + gap)) {
+            // location.reload(); // Перезагрузка страницы
+            score = 0;
+            main_audio.pause();
+            setTimeout(play_main,2000);
+            fail_audio.play();
+        }
+        if ( yPos + bird.height >= cvs.height - fg.height) {
+            location.reload();
         }
 
         if(pipe[i].x == 5) {
