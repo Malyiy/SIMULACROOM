@@ -8,27 +8,40 @@ body {
 	background-size: cover;
 	display: flex;
     width: 100%;
-    height: 80vh;
+    height:90vh;
 }
 .main {
 	width: 80%;
     margin: auto;
 }
-#logo {
-/*	display: flex;
-*/	width: 50%;
+.description{
+	display: grid;
+	grid-template-columns: 30% 70%;	
+}
+#logo{
+	width: 70%;
+}
+#avatar{
+	width: 80%;
+	margin: 20px 30px 20px 15px;
+}
+.right_side{
+	border-radius: 20px;
+	display:grid;
+	grid-template-columns: 30% 70%;
+	border: 8px solid rgba(180, 180, 180, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+#user_information{
 	margin:auto;
+	margin-left: 20%;
 }
-.content > p {
-	text-align: center;
+#user_information p{
+	display: block;
+	border-bottom: solid gray 0.4px;
 }
-.description {
-	top: 15%;
-	left: 10%;
-	width: 35%;
-	position: absolute;
-}
-.news-title {
+
+/.news-title {
 	padding: 15px;
 	margin-bottom: 15px;
 	border: 1px solid #000;
